@@ -17,8 +17,8 @@
   h3,
   h4 {
     @apply font-serif text-navy;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-weight: 500;
+    letter-spacing: 0;
   }
 
   ::selection {
@@ -56,8 +56,8 @@
 
   .display {
     @apply font-serif text-navy;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    letter-spacing: -0.005em;
     line-height: 1.05;
   }
 

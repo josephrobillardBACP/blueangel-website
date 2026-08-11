@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, HeartPulse, Landmark, Users } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
+import caduceusWhite from "@/assets/caduceus-white.png";
 
 const pillars = [
   {
@@ -22,12 +23,6 @@ const pillars = [
     body: "Built in partnership with concierge physicians, our unique approach is designed to take your practice to the next level.",
     to: "/about",
   },
-];
-
-const stats = [
-  { value: "$15M", label: "Raised to accelerate concierge medicine" },
-  { value: "Doctor-first", label: "Partnership, not private equity" },
-  { value: "Long-term", label: "Built to support, not to flip" },
 ];
 
 export default function Home() {
@@ -61,35 +56,24 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Hero visual card */}
+          {/* Hero visual — stylized brand emblem */}
           <Reveal delay={0.15}>
-            <div className="relative">
-              <div className="card overflow-hidden p-0">
-                <div className="bg-gradient-to-br from-navy to-navy-700 p-10 text-cream">
-                  <p className="font-serif text-2xl leading-snug">
-                    “Better for doctors. Better for patients. We see this as the
-                    future of primary care.”
-                  </p>
-                  <div className="mt-8 flex items-center gap-3">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-cream/15 text-cream">
-                      <HeartPulse size={20} />
-                    </span>
-                    <div className="text-sm text-cream/70">
-                      The Blue Angel mission
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 divide-x divide-navy/10 bg-white/60">
-                  {stats.map((s) => (
-                    <div key={s.label} className="p-5 text-center">
-                      <div className="font-serif text-xl text-navy">{s.value}</div>
-                      <div className="mt-1 text-[11px] leading-tight text-muted">
-                        {s.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="relative mx-auto grid aspect-square w-full max-w-md place-items-center">
+              {/* ambient glow */}
+              <div className="pointer-events-none absolute inset-6 rounded-full bg-azure/15 blur-3xl" />
+              {/* navy seal */}
+              <div className="relative grid aspect-square w-[88%] place-items-center rounded-full bg-gradient-to-br from-navy to-navy-700 shadow-soft ring-1 ring-navy/10">
+                {/* concentric halo rings */}
+                <div className="absolute inset-5 rounded-full border border-cream/10" />
+                <div className="absolute inset-10 rounded-full border border-gold/30" />
+                <img
+                  src={caduceusWhite}
+                  alt="Blue Angel caduceus emblem"
+                  className="relative w-[46%]"
+                />
               </div>
+              {/* gold accent dot */}
+              <div className="absolute right-[9%] top-[13%] h-3 w-3 rounded-full bg-gold shadow-soft" />
             </div>
           </Reveal>
         </div>

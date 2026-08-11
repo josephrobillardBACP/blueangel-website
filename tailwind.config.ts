@@ -5,28 +5,30 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand palette — yuna.io warmth adapted to "Blue Angel"
+        // Official Blue Angel brand palette (Brand Guide_vCurrent)
         cream: "#F6F1E9", // warm off-white page background
         sand: "#EFE7DA", // slightly deeper warm tone for alternating sections
         navy: {
-          DEFAULT: "#0E2A47", // primary deep brand blue (yuna's forest-green role)
-          900: "#0A2038",
-          800: "#0E2A47",
-          700: "#173A5E",
-          600: "#22496F",
+          DEFAULT: "#063862", // primary brand navy
+          900: "#04263F",
+          800: "#063862",
+          700: "#0B4E82",
+          600: "#12669F",
         },
         azure: {
-          DEFAULT: "#3E7CB1", // bright accent
-          light: "#6FA3CE",
-          dark: "#2F6394",
+          DEFAULT: "#3773A5", // brand medium blue (accent5)
+          light: "#5B93BF",
+          dark: "#2C5D86",
         },
-        gold: "#C9A24B", // secondary accent, sparingly
-        ink: "#12233A", // body text
+        gold: "#BA832F", // brand gold (accent3)
+        teal: "#3D7A6E", // brand teal (accent2)
+        slate: "#354450", // brand slate (accent6)
+        ink: "#263D4F", // body text
         muted: "#5B6B7C", // secondary text
       },
       fontFamily: {
-        serif: ['"Fraunces"', "Georgia", "serif"],
-        sans: ['"Inter"', "system-ui", "sans-serif"],
+        serif: ['"Cormorant"', "Georgia", "serif"],
+        sans: ['"Montserrat"', "system-ui", "sans-serif"],
       },
       borderRadius: {
         pill: "9999px",

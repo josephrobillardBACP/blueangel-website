@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { site } from "@/content/site";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,18 +25,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="container-x flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5" aria-label={site.name}>
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-navy text-cream">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path
-                d="M12 3c2.5 3.5 6 5 9 5-1.5 6-5 11-9 13-4-2-7.5-7-9-13 3 0 6.5-1.5 9-5Z"
-                fill="currentColor"
-              />
-            </svg>
-          </span>
-          <span className="font-serif text-lg leading-none text-navy">
-            Blue&nbsp;Angel
-          </span>
+        <Link to="/" className="flex items-center" aria-label={site.name}>
+          <img
+            src={logoHorizontal}
+            alt="Blue Angel Clinical Partners"
+            className="h-9 w-auto sm:h-10"
+          />
         </Link>
 
         {/* Desktop nav */}
