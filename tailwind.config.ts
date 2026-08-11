@@ -41,13 +41,16 @@ export default {
         card: "0 2px 24px -8px rgba(14, 42, 71, 0.15)",
       },
       keyframes: {
+        // Transform-only on purpose: we never animate opacity, so content can
+        // never be left invisible if the animation doesn't run/complete on a
+        // client-side route change. It's a subtle upward settle, nothing more.
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { transform: "translateY(14px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
       animation: {
-        "fade-up": "fade-up 0.6s ease-out both",
+        "fade-up": "fade-up 0.5s ease-out",
       },
     },
   },

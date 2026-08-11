@@ -7,7 +7,7 @@ import { Loader2, CheckCircle2 } from "lucide-react";
  * Get a free key at https://web3forms.com (it is safe to expose in the client),
  * then paste it below. Until then, submissions will return an error.
  */
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "648f2dba-671f-44d8-ac39-d82cae2d564c";
 
 type Status = "idle" | "submitting" | "success" | "error";
 

@@ -3,6 +3,7 @@ import { ArrowUpRight, HeartPulse, Landmark, Users } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import heroPhoto from "@/assets/home-doctor-patient.jpg";
+import caduceus from "@/assets/caduceus.png";
 
 const pillars = [
   {
@@ -115,25 +116,8 @@ export default function Home() {
       </section>
 
       {/* Mission band */}
-      <section className="relative overflow-hidden bg-sand py-20 sm:py-28">
-        {/* washed-out EKG / heartbeat medical graphic */}
-        <svg
-          className="pointer-events-none absolute left-0 top-1/2 w-full -translate-y-1/2 text-navy/[0.07]"
-          viewBox="0 0 1200 200"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M0 100 H250 l28 0 22 -66 26 132 20 -104 16 38 14 0 H620 l28 0 22 -66 26 132 20 -104 16 38 14 0 H1200"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="4"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
-        <div className="container-x relative grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section className="bg-sand py-20 sm:py-28">
+        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <span className="eyebrow">Why now</span>
             <h2 className="display mt-4 text-3xl sm:text-4xl">
@@ -141,23 +125,33 @@ export default function Home() {
               the bright spot.
             </h2>
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="space-y-5 text-muted">
-              <p>
-                Physician burnout has reached all-time highs and declining
-                reimbursement rates have made it harder than ever to make ends meet.
-                The concierge model offers a solution: fewer patients per day, longer
-                appointments, personalized care, and more time for prevention.
-              </p>
-              <p>
-                We're not a private equity firm and we're not a large hospital
-                system. Built in partnership with tenured concierge physicians, we're
-                a new type of partner dedicated to supporting independent practices
-                for the long term — not flipping them for profit.
-              </p>
-              <Link to="/about" className="btn-ghost px-0">
-                Read our full mission <ArrowUpRight size={16} />
-              </Link>
+          <Reveal>
+            <div className="relative overflow-hidden rounded-3xl bg-cream/60 p-8 ring-1 ring-navy/5 sm:p-10">
+              {/* washed-out brand watermark, contained to this panel */}
+              <img
+                src={caduceus}
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-10 -top-12 w-48 opacity-[0.06]"
+              />
+              <div className="relative space-y-5 text-muted">
+                <p>
+                  Physician burnout has reached all-time highs and declining
+                  reimbursement rates have made it harder than ever to make ends
+                  meet. The concierge model offers a solution: fewer patients per
+                  day, longer appointments, personalized care, and more time for
+                  prevention.
+                </p>
+                <p>
+                  We're not a private equity firm and we're not a large hospital
+                  system. Built in partnership with tenured concierge physicians,
+                  we're a new type of partner dedicated to supporting independent
+                  practices for the long term — not flipping them for profit.
+                </p>
+                <Link to="/about" className="btn-ghost px-0">
+                  Read our full mission <ArrowUpRight size={16} />
+                </Link>
+              </div>
             </div>
           </Reveal>
         </div>

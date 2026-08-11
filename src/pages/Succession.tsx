@@ -112,10 +112,7 @@ export default function Succession() {
         </div>
       </section>
 
-      <CTASection
-        title="Curious what your practice is worth?"
-        body="Reach out to our team directly and we'll start a confidential, no-pressure conversation about your next chapter."
-      />
+      <CTASection />
     </>
   );
 }

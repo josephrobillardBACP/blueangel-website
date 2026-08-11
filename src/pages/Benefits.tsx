@@ -73,10 +73,7 @@ export default function Benefits() {
         <BenefitGrid items={administrative} />
       </section>
 
-      <CTASection
-        title="See what partnership could look like."
-        body="Tell us about your practice and we'll walk you through exactly how Blue Angel would support you."
-      />
+      <CTASection />
     </>
   );
 }
