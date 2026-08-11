@@ -1,6 +1,7 @@
 import { Mail, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import ContactForm from "@/components/ContactForm";
 import { site } from "@/content/site";
 
 export default function Contact() {
@@ -63,6 +64,12 @@ export default function Contact() {
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.1}>
+          <div className="mx-auto mt-6 max-w-2xl">
+            <ContactForm />
+          </div>
+        </Reveal>
       </section>
     </>
   );

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, HeartPulse, Landmark, Users } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
-import caduceusWhite from "@/assets/caduceus-white.png";
+import heroPhoto from "@/assets/home-doctor-patient.jpg";
 
 const pillars = [
   {
@@ -46,7 +46,7 @@ export default function Home() {
                 doctor-first approach to partnership can set you up for success.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
-                <Link to="/about" className="btn-primary">
+                <Link to="/succession" className="btn-primary">
                   Explore the model <ArrowUpRight size={18} />
                 </Link>
                 <Link to="/contact" className="btn-outline">
@@ -56,24 +56,22 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Hero visual — stylized brand emblem */}
+          {/* Hero visual — doctor & patient */}
           <Reveal delay={0.15}>
-            <div className="relative mx-auto grid aspect-square w-full max-w-md place-items-center">
-              {/* ambient glow */}
-              <div className="pointer-events-none absolute inset-6 rounded-full bg-azure/15 blur-3xl" />
-              {/* navy seal */}
-              <div className="relative grid aspect-square w-[88%] place-items-center rounded-full bg-gradient-to-br from-navy to-navy-700 shadow-soft ring-1 ring-navy/10">
-                {/* concentric halo rings */}
-                <div className="absolute inset-5 rounded-full border border-cream/10" />
-                <div className="absolute inset-10 rounded-full border border-gold/30" />
+            <div className="relative mx-auto w-full max-w-lg">
+              {/* soft ambient glows */}
+              <div className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-azure/15 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-gold/10 blur-3xl" />
+              <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-navy/10">
                 <img
-                  src={caduceusWhite}
-                  alt="Blue Angel caduceus emblem"
-                  className="relative w-[46%]"
+                  src={heroPhoto}
+                  alt="A Blue Angel physician with a patient"
+                  className="aspect-[4/3] w-full object-cover"
+                  loading="eager"
                 />
               </div>
               {/* gold accent dot */}
-              <div className="absolute right-[9%] top-[13%] h-3 w-3 rounded-full bg-gold shadow-soft" />
+              <div className="absolute -right-2 top-8 h-3.5 w-3.5 rounded-full bg-gold shadow-soft" />
             </div>
           </Reveal>
         </div>
@@ -117,8 +115,25 @@ export default function Home() {
       </section>
 
       {/* Mission band */}
-      <section className="bg-sand py-20 sm:py-28">
-        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section className="relative overflow-hidden bg-sand py-20 sm:py-28">
+        {/* washed-out EKG / heartbeat medical graphic */}
+        <svg
+          className="pointer-events-none absolute left-0 top-1/2 w-full -translate-y-1/2 text-navy/[0.07]"
+          viewBox="0 0 1200 200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 100 H250 l28 0 22 -66 26 132 20 -104 16 38 14 0 H620 l28 0 22 -66 26 132 20 -104 16 38 14 0 H1200"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeLinejoin="round"
+            strokeLinecap="round"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+        <div className="container-x relative grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <span className="eyebrow">Why now</span>
             <h2 className="display mt-4 text-3xl sm:text-4xl">

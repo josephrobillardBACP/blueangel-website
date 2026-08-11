@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Accessibility + fail-safe: the entrance animation (.animate-fade-up) starts
+ * from opacity:0. For anyone who prefers reduced motion, disable it entirely so
+ * content renders immediately at its visible rest state (opacity:1) instead of
+ * animating in.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none !important;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

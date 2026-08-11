@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
+import ContactForm from "./ContactForm";
 import { site } from "@/content/site";
 
 interface CTASectionProps {
@@ -32,6 +33,12 @@ export default function CTASection({
               </Link>
             </div>
           </div>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mx-auto mt-8 max-w-2xl">
+          <ContactForm />
         </div>
       </Reveal>
     </section>

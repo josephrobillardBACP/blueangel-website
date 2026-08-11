@@ -63,7 +63,14 @@ export default function Footer() {
       <div className="border-t border-cream/10">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-cream/50 sm:flex-row">
           <p>© {new Date().getFullYear()} Blue Angel Clinical Partners. All rights reserved.</p>
-          <p>Doctor-first partnership · Concierge medicine</p>
+          <div className="flex items-center gap-5">
+            <Link to="/privacy-policy" className="text-cream/60 hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-of-service" className="text-cream/60 hover:text-white">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -8,6 +8,8 @@ import Joining from "@/pages/Joining";
 import Partners from "@/pages/Partners";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 import NotFound from "@/pages/NotFound";
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
